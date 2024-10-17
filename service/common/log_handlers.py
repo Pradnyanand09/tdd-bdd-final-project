@@ -32,6 +32,4 @@ def init_logging(app, logger_name: str):
     # Make all log formats consistent
     format_string = "[%(asctime)s] [%(levelname)s] [%(module)s] %(message)s"
     formatter = logging.Formatter(format_string, "%Y-%m-%d %H:%M:%S %z")
-    for handler in app.logger.handlers:
-        handler.setFormatter(formatter)
     app.logger.info("Logging handler established")
